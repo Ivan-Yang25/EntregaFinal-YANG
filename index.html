@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/base.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
-    <header>
-        <h1>
-            INGRESE SUS DATOS
-        </h1>
-    </header>
+<body class="cuerpo">
 
-    <form id="form" method="post">
+    <div class="contenedor">
+      <h1>
+        INICIO DE SESION
+    </h1>
+      <form id="form" method="post">
         <ul>
-          <li>
-            <label id="formNombre" for="name">Usuario:</label>
+          <li class="datos">
+            <label id="formNombre" for="name">Usuario</label></br>
             <input type="text" id="name" name="user_name" />
           </li>
-          <li>
-            <label id="formPass" for="mail">Contraseña:</label>
+          <li class="datos">
+            <label id="formPass" for="mail">Contraseña</label></br>
             <input type="password" id="password" name="user_mail" />
           </li>
           <li>
@@ -29,6 +32,8 @@
           </li>
         </ul>
       </form>
+    </div>
+    
     
 </body>
 <script src="JS/main.js"></script>

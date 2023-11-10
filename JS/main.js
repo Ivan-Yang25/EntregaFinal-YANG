@@ -5,16 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let formPass = document.getElementById('password');
     let alerta = document.createElement('DIV');
 
-    form.appendChild(alerta);
-    
+    alerta.innerHTML = `<p>
+                            Complete los campos correspondientes
+                        </P>`
 
     form.addEventListener('submit', event => {
         event.preventDefault();
 
         let name = formName.value;
         let password = formPass.value;
-
-        console.log(password);
 
         function DatosUsuario(name, password){
 
@@ -24,25 +23,31 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     
         const DatosUsuario1 = new DatosUsuario(name, password);
+        
+        sessionStorage.setItem("usuarios", JSON.stringify(DatosUsuario1));
 
         if(DatosUsuario1.name === '' && DatosUsuario1.password === '') {
 
-            alert('Complete el formulario');
+            form.appendChild(alerta);
+
+            setTimeout(() => {
+                alerta.remove()
+            }, 3000);
+            
 
         } else if( DatosUsuario1.name === '' || DatosUsuario1.password === ''){
 
-            alert('Complete el formulario')
-        } else {
+            form.appendChild(alerta);
 
-            alerta.innerHTML = `<span>Formulario completado</span>`
+            setTimeout(() => {
+                alerta.remove()
+            }, 3000);
+
+        } else {
+            
+            return window.location = "tienda.html";
         };
-        
+
     });
 
-    
-
-    
-
-    
-
-})
+});

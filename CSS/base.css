@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200&display=swap");
+.cuerpo {
+  background-color: black;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.cuerpo .contenedor {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  width: 40vw;
+  height: 50%;
+  background-color: white;
+  border-radius: 10px;
+}
+.cuerpo .contenedor #form {
+  text-align: center;
+  font-size: 30px;
+  list-style: none;
+}
+.cuerpo .contenedor #form ul {
+  font-size: 40px;
+  text-align: center;
+  list-style: none;
+  padding: 0px;
+}
+.cuerpo .contenedor #form ul .datos {
+  margin-top: 50px;
+}
+.cuerpo .contenedor #form ul .datos input {
+  width: 300px;
+  height: 30px;
+}
+.cuerpo .contenedor #form ul button {
+  width: 150px;
+  height: 40px;
+}
+.cuerpo .contenedor #form ul button:hover {
+  background-color: black;
+  color: white;
+}
+
+.navbar {
+  display: grid;
+  background-color: black;
+  width: 100%;
+  height: 100px;
+  color: white;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+}
+.navbar h1 {
+  font-size: 50px;
+  margin-left: 10px;
+}
+.navbar div {
+  display: grid;
+  justify-items: end;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+}
+.navbar div .user {
+  display: flex;
+  width: 200px;
+  height: 60px;
+  font-size: 20px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border-radius: 5px;
+}
+.navbar div .close {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  border-radius: 30px;
+}
+
+.section__article {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+.section__article h2 {
+  font-size: 40px;
+  margin-top: 5%;
+  margin-bottom: 15%;
+}
+.section__article .article__card {
+  margin-top: 50px;
+  margin-bottom: 10%;
+  padding: 0px;
+  width: 80vw;
+  height: 100%;
+  height: auto;
+  background-color: black;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(5, 1fr);
+}
+.section__article .article__card .card {
+  background-color: white;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+}
+
+* {
+  margin: 0px;
+  font-family: "Anton", sans-serif;
+}
+
+/*# sourceMappingURL=base.css.map */

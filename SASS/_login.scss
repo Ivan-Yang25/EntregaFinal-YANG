@@ -1,0 +1,51 @@
+.cuerpo {
+
+    background-color: black;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .contenedor {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        width: 40vw;
+        height: 50%;
+        background-color: white;
+        border-radius: 10px;
+
+        #form {
+            text-align: center;
+            font-size: 30px;
+            list-style: none;
+            
+            ul {
+                font-size: 40px;
+                text-align: center;
+                list-style: none;
+                padding: 0px;
+
+                .datos {
+                    margin-top: 50px;
+    
+                    input {
+                        width: 300px;
+                        height: 30px;
+                    }
+                }
+
+                button {
+
+                    width: 150px;
+                    height: 40px;
+
+                    &:hover {
+                        background-color: black;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
