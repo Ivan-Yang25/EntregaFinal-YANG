@@ -55,11 +55,11 @@
   font-size: 50px;
   margin-left: 10px;
 }
-.navbar div {
+.navbar .info {
   display: grid;
   justify-items: end;
   align-items: center;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 .navbar div .user {
   display: flex;
@@ -72,6 +72,37 @@
   color: black;
   border-radius: 5px;
 }
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+.navbar .visual {
+
+  width: 300px;
+  height: 300px;
+  background-color: black;
+  position: absolute;
+  left: 70%;
+  bottom: 58%;
+  color: white;
+  text-align: center;
+  
+}
+
+.navbar .visual div {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar .visual div h5 {
+
+  font-size: 20px;
+}
+
 .navbar div .close {
   width: 50px;
   height: 50px;
