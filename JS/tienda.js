@@ -21,8 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    let pokemonObj1;
-
     for (let u = 0; u < compra.length; u++) {
 
         compra[u].addEventListener('click', () => {
