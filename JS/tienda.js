@@ -10,13 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let persona = sessionStorage.getItem("usuarios");
     let personaObj = JSON.parse(persona);
     let content = document.createElement('DIV');
-    let contentObj = document.createElement('DIV');
 
 
     nav.appendChild(content);
 
     items.addEventListener('click', () => {
-        content.classList.contains('visual') ? content.classList.remove('visual') : content.classList.add('visual'); 
+        content.classList.contains('visual') ? content.classList.remove('visual') : content.classList.add('visual');
     });
 
     let { name } = personaObj;
@@ -39,18 +38,23 @@ document.addEventListener('DOMContentLoaded', () => {
             let clase = pokemon[u].getElementsByClassName('clase')[0].textContent;
             let precio = pokemon[u].getElementsByClassName('precio')[0].textContent;
 
-            
-            contentObj.innerHTML = `
-                <h5>
-                    El pokemon es ${nombre}
-                </h5>    
-                <p>
-                    Clase: ${clase}</br>
-                    precio: ${precio}
-                </P>
-            `
-            content.appendChild(contentObj);
+            const itemCarrito = new pokemonObj(nombre, clase, precio);
+            carrito.push(itemCarrito);
 
+            let contenidoCarrito ='';
+            
+            carrito.forEach(item => {
+
+                contenidoCarrito += `
+                    <h5>El Pokemon es: ${item.nombre}</h5></br>
+                    <p>
+                        La clase de Pokemon es: ${item.clase}</br>
+                        El precio es: ${item.precio}
+                    </p>
+                `
+            });
+            
+            content.innerHTML = contenidoCarrito;
         });
     };
 
