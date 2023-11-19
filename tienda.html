@@ -18,10 +18,29 @@
             Tienda Pokemon
         </h1>
         <div class="info">
-            <span id="users" class="user">
+            <span id="users" class="user"></span>
 
-            </span>
-            <img id="compras" src="assents/carro-de-la-carretilla.png" alt="Carrito de compras" />
+            <i id="compras" class="fa-regular fa-credit-card carro">
+                <div class="buy-card">
+                    <table class="tabla">
+                        <thead class="nav-card">
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Tipo</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody id="content"></tbody>
+                        <tr>
+                            <td>
+                                <button id="clear" class="close-carrito">
+                                    VACIAR CARRITO
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </i>
             <button id="cierre" class="close">
                 X
             </button>
@@ -126,6 +145,7 @@
         </article>
     </section>
     <script src="JS/tienda.js"></script>
+    <script src="https://kit.fontawesome.com/9b1b301e43.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
