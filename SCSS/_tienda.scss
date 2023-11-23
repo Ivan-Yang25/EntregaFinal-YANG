@@ -10,7 +10,7 @@
     h1 {
         font-size: 50px;
         margin-left: 10px;
-
+        letter-spacing: 2px;
     }
 
     .info {
@@ -80,6 +80,7 @@
                     background-color: transparent;
                     color: white;
                     border: 1px solid white;
+                    cursor: pointer;
                 }
             }
         }
@@ -97,13 +98,15 @@
     }
 }
 
+
 .section__article {
     display: grid;
     justify-content: center;
     text-align: center;
+    height: 90%;
 
     h2 {
-        font-size: 40px;
+        font-size: 50px;
         margin-top: 5%;
         margin-bottom: 15%;
     }
@@ -118,15 +121,24 @@
         height: 100%;
         height: auto;
         background-color: black;
+        border-radius: 5px;
         display: grid;
         gap: 10px;
         grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
 
         .card {
             background-color: white;
             text-align: center;
             width: 200px;
             height: 200px;
+            margin: 30px;
+            border-radius: 5px;
+
+            .nombre {
+                font-size: 20px;
+
+            }
         }
     }
 }
