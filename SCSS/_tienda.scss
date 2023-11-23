@@ -137,8 +137,62 @@
 
             .nombre {
                 font-size: 20px;
-
+                text-transform: uppercase;
             }
+
+            .compra {
+                margin-top: 40%;
+            }
+        }
+
+        .card-b {
+
+            background-image: url("/assents/bulbasaur.jpg");
+            background-size: cover;
+        };
+
+        .card-i {
+            background-image: url("/assents/ivysaur.jpg");
+            background-size: cover;
+        }
+
+        .card-v {
+            background-image: url("/assents/venusaur.jpg");
+            background-size: cover;
+        }
+        .card-c {
+            background-image: url("/assents/charmander.jpg");
+            background-size: cover;
+        }
+
+        .card-ch {
+            background-image: url("/assents/charmeleon.jpeg");
+            background-size: cover;
+        }
+
+        .card-cha {
+            background-image: url("/assents/charizard.jpg");
+            background-size: cover;
+        }
+
+        .card-s {
+            background-image: url("/assents/squirtle.png");
+            background-size: cover;
+        }
+
+        .card-w {
+            background-image: url("/assents/wartortle.jpeg");
+            background-size: cover;
+        }
+
+        .card-bl {
+            background-image: url("/assents/blastoise.jpg");
+            background-size: cover;
+        }
+
+        .card-ca {
+            background-image: url("/assents/caterpie.jpg");
+            background-size: cover;
         }
     }
 }

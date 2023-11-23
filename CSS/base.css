@@ -160,6 +160,50 @@
 }
 .section__article .article__card .card .nombre {
   font-size: 20px;
+  text-transform: uppercase;
+}
+.section__article .article__card .card .compra {
+  margin-top: 40%;
+}
+.section__article .article__card .card-b {
+  background-image: url("/assents/bulbasaur.jpg");
+  background-size: cover;
+}
+.section__article .article__card .card-i {
+  background-image: url("/assents/ivysaur.jpg");
+  background-size: cover;
+}
+.section__article .article__card .card-v {
+  background-image: url("/assents/venusaur.jpg");
+  background-size: cover;
+}
+.section__article .article__card .card-c {
+  background-image: url("/assents/charmander.jpg");
+  background-size: cover;
+}
+.section__article .article__card .card-ch {
+  background-image: url("/assents/charmeleon.jpeg");
+  background-size: cover;
+}
+.section__article .article__card .card-cha {
+  background-image: url("/assents/charizard.jpg");
+  background-size: cover;
+}
+.section__article .article__card .card-s {
+  background-image: url("/assents/squirtle.png");
+  background-size: cover;
+}
+.section__article .article__card .card-w {
+  background-image: url("/assents/wartortle.jpeg");
+  background-size: cover;
+}
+.section__article .article__card .card-bl {
+  background-image: url("/assents/blastoise.jpg");
+  background-size: cover;
+}
+.section__article .article__card .card-ca {
+  background-image: url("/assents/caterpie.jpg");
+  background-size: cover;
 }
 
 * {

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Pre-entrega-CoderHouse</title>
 </head>
 
@@ -52,7 +53,7 @@
             Seccion de Pokemon
         </h2>
         <article class="article__card">
-            <div class="card">
+            <div data-aos="fade-right" class="card card-b">
                 <h5 class="nombre"></h5>
                 <p class="clase"></p></br>
                 <span class="precio"></span>
@@ -61,7 +62,7 @@
                     Comprar
                 </button>
             </div>
-            <div class="card">
+            <div data-aos="fade-right" class="card card-i">
                 <h5 class="nombre"></h5>
                 <p class="clase"></p></br>
                 <span class="precio"></span>
@@ -70,7 +71,7 @@
                     Comprar
                 </button>
             </div>
-            <div class="card">
+            <div data-aos="flip-left" class="card card-v">
                 <h5 class="nombre"></h5>
                 <p class="clase"></p></br>
                 <span class="precio"></span>
@@ -79,7 +80,7 @@
                     Comprar
                 </button>
             </div>
-            <div class="card">
+            <div data-aos="fade-left" class="card card-c">
                 <h5 class="nombre"></h5>
                 <p class="clase"></p></br>
                 <span class="precio"></span>
@@ -88,7 +89,7 @@
                     Comprar
                 </button>
             </div>
-            <div class="card">
+            <div data-aos="fade-left" class="card card-ch">
                 <h5 class="nombre"></h5>
                 <p class="clase"></p></br>
                 <span class="precio"></span>
@@ -97,7 +98,16 @@
                     Comprar
                 </button>
             </div>
-            <div class="card">
+            <div data-aos="fade-up" class="card card-cha">
+                <h5 class="nombre"></h5>
+                <p class="clase"></p></br>
+                <span class="precio"></span>
+
+                <button class="compra">
+                    Comprar
+                </button>
+            </div> 
+            <div data-aos="fade-up" class="card card-s">
                 <h5 class="nombre"></h5>
                 <p class="clase"></p></br>
                 <span class="precio"></span>
@@ -106,7 +116,7 @@
                     Comprar
                 </button>
             </div>
-            <div class="card">
+            <div data-aos="fade-up" class="card card-w">
                 <h5 class="nombre"></h5>
                 <p class="clase"></p></br>
                 <span class="precio"></span>
@@ -115,16 +125,7 @@
                     Comprar
                 </button>
             </div>
-            <div class="card">
-                <h5 class="nombre"></h5>
-                <p class="clase"></p></br>
-                <span class="precio"></span>
-
-                <button class="compra">
-                    Comprar
-                </button>
-            </div>
-            <div class="card">
+            <div data-aos="fade-up" class="card card-bl">
                 <h5 class="nombre"></h5>
                 <p class="clase"> </p></br>
                 <span class="precio"></span>
@@ -133,7 +134,7 @@
                     Comprar
                 </button>
             </div>
-            <div class="card">
+            <div data-aos="fade-up" class="card card-ca">
                 <h5 class="nombre"></h5>
                 <p class="clase"></p></br>
                 <span class="precio"></span>
@@ -146,6 +147,10 @@
     </section>
     <script src="JS/tienda.js"></script>
     <script src="https://kit.fontawesome.com/9b1b301e43.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
