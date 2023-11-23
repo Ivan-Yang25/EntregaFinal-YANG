@@ -140,8 +140,13 @@
                 text-transform: uppercase;
             }
 
+            .clase {
+                text-transform: uppercase;
+            }
+
             .compra {
                 margin-top: 40%;
+                border-radius: 10px;
             }
         }
 
@@ -195,4 +200,5 @@
             background-size: cover;
         }
     }
-}
+};
+

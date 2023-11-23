@@ -7,13 +7,25 @@ document.addEventListener('DOMContentLoaded', () => {
     let formName = document.getElementById('name');
     let formPass = document.getElementById('password');
     let alerta = document.createElement('DIV');
+    let lista = document.getElementById('ul_list');
+    let btn = document.getElementById('btn');
+    let inp = document.getElementById('token');
 
     //Agregando contenido a la alerta
     alerta.innerHTML = `<p>
                             Complete los campos correspondientes
                         </P>`
 
+
+    //Creancion de funcion para numero aleatorio para Token
+
+    function Aleatorio(min, max) {
+
+        return Math.floor((Math.random() * (max - min + 1)) + min);
+    }
     
+    let random = Aleatorio(1, 100);
+
     //Agregando evento y preveniento que inicie antes de terminar el codigo
     form.addEventListener('submit', event => {
         event.preventDefault();
@@ -56,10 +68,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } else {
             
-            //Envio hacia la otra pagina
-            return window.location = "tienda.html";
-        };
+            let Token = document.createElement('li');
+            Token.innerHTML = `
+                    <input type="text" id="token">
+            `
 
+            lista.insertBefore(Token, btn);
+            
+        };
+        
     });
 
 });

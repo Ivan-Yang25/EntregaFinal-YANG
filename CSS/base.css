@@ -162,8 +162,12 @@
   font-size: 20px;
   text-transform: uppercase;
 }
+.section__article .article__card .card .clase {
+  text-transform: uppercase;
+}
 .section__article .article__card .card .compra {
   margin-top: 40%;
+  border-radius: 10px;
 }
 .section__article .article__card .card-b {
   background-image: url("/assents/bulbasaur.jpg");
