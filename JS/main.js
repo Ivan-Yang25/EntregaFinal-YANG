@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sessionStorage.setItem("usuarios", JSON.stringify(DatosUsuario1));
 
         //Validando inicio de sesion
-        if(DatosUsuario1.name === '' && DatosUsuario1.password === '') {
+        if(DatosUsuario1.name === '' && DatosUsuario1.password === '') and {
 
             form.appendChild(alerta);
 
@@ -66,7 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 alerta.remove()
             }, 3000);
 
-        } else {
+        };
+
+        if (typeof DatosUsuario1.name.value === String && typeof DatosUsuario1.password.value === String) {
             
             let Token = document.createElement('li');
             Token.innerHTML = `
