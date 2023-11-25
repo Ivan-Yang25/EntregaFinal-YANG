@@ -1,7 +1,7 @@
 //Inicio de JS
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     //Extraer elementos del DOM
     let form = document.getElementById('form');
     let formName = document.getElementById('name');
@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let lista = document.getElementById('ul_list');
     let btn = document.getElementById('btn');
     let inp = document.getElementById('token');
+    let Token = document.createElement('li');
 
     //Agregando contenido a la alerta
     alerta.innerHTML = `<p>
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return Math.floor((Math.random() * (max - min + 1)) + min);
     }
-    
+
     let random = Aleatorio(1, 100);
 
     //Agregando evento y preveniento que inicie antes de terminar el codigo
@@ -35,30 +36,30 @@ document.addEventListener('DOMContentLoaded', () => {
         let password = formPass.value;
 
         //Funcion para crear un creador de objetos
-        function DatosUsuario(name, password){
+        function DatosUsuario(name, password) {
 
             this.name = name;
             this.password = password;
-    
+
         };
-        
+
         //Instanciando un objeto
         const DatosUsuario1 = new DatosUsuario(name, password);
-        
+
         //Guardando el objeto en un sessionstorage
         sessionStorage.setItem("usuarios", JSON.stringify(DatosUsuario1));
 
         //Validando inicio de sesion
-        if(DatosUsuario1.name === '' && DatosUsuario1.password === '') {
+        if (DatosUsuario1.name === '' && DatosUsuario1.password === '') {
 
             form.appendChild(alerta);
 
             setTimeout(() => {
                 alerta.remove()
             }, 3000);
-            
 
-        } else if( DatosUsuario1.name === '' || DatosUsuario1.password === ''){
+
+        } else if (DatosUsuario1.name === '' || DatosUsuario1.password === '') {
 
             form.appendChild(alerta);
 
@@ -68,15 +69,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } else {
             
-            let Token = document.createElement('li');
-            Token.innerHTML = `
-                    <input type="text" id="token">
-            `
+            if (!lista.contains(Token)) {
 
-            lista.insertBefore(Token, btn);
-            
+                Token.innerHTML = `<input type="text" id="token" />`
+                lista.insertBefore(Token, btn);
+
+                alert(`TUTOKENUSU${random}`);
+            };
+
         };
-        
+
     });
 
 });
