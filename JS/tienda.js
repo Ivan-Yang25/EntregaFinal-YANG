@@ -108,9 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     //Agregando contenido a la variable
                     contenidoCarrito += `
                     <tr class="elemento">
-                        <td>El Pokemon es: ${item.nombre}</td>
-                        <td>La clase del Pokemon es: ${item.clase}</td>
-                        <td>El precio es: ${item.precio}</td>   
+                        <td>${item.nombre}</td>
+                        <td>${item.clase}</td>
+                        <td>$${item.precio}</td>   
                     </tr>
                     `
                 });
