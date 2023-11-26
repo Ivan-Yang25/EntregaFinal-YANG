@@ -89,9 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
                          window.location = 'tienda.html';
                     };
                 });
-
             };
         };
     });
-
 });
