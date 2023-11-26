@@ -10,7 +10,8 @@
         display: grid;
         justify-content: center;
         text-align: center;
-        width: 40vw;
+        min-width: 40vw;
+        width: auto;
         height: auto;
         background-color: rgb(255, 240, 201, 0.6);
         border-radius: 10px;
