@@ -1,15 +1,14 @@
 //Inicio de JS
-
 document.addEventListener('DOMContentLoaded', () => {
 
     //Extraer elementos del DOM
     let form = document.getElementById('form');
+    let content = document.getElementById('sesion');
     let formName = document.getElementById('name');
     let formPass = document.getElementById('password');
     let alerta = document.createElement('DIV');
     let lista = document.getElementById('ul_list');
     let btn = document.getElementById('btn');
-    let inp = document.getElementById('token');
     let Token = document.createElement('li');
 
     //Agregando contenido a la alerta
@@ -68,17 +67,31 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 3000);
 
         } else {
-            
+
             if (!lista.contains(Token)) {
 
                 Token.innerHTML = `<input type="text" id="token" />`
                 lista.insertBefore(Token, btn);
 
-                alert(`TUTOKENUSU${random}`);
+                var AlertaToken = document.createElement('span');
+                AlertaToken.textContent = `TUTOKENUSU${random}`;
+
+                content.insertBefore(AlertaToken, form);
+
+                let inp = document.getElementById('token');
+
+                inp.addEventListener('keydown', () => {
+
+                    let valorToken = inp.value;
+
+                    if(valorToken === AlertaToken.textContent) {
+
+                         window.location = 'tienda.html';
+                    };
+                });
+
             };
-
         };
-
     });
 
 });
