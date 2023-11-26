@@ -6,6 +6,7 @@
     color: white;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
+    border-bottom: 2px solid white;
 
     h1 {
         font-size: 50px;
@@ -17,17 +18,17 @@
         display: grid;
         justify-items: end;
         align-items: center;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 2fr 0.5fr 0.5fr;
 
         .user {
             display: flex;
             width: 200px;
             height: 60px;
             font-size: 20px;
-            background-color: white;
+            background-image: url('../assents/fondoPokemon.jpg');
             justify-content: center;
             align-items: center;
-            color: black;
+            color: white;
             border-radius: 5px;
         }
 
@@ -55,6 +56,8 @@
 
             &:hover .buy-card {
                 display: block;
+                overflow: hidden;
+                overflow-y: scroll;
                 width: 400px;
                 height: 400px;
                 position: absolute;
@@ -94,12 +97,17 @@
             height: 50px;
             margin-right: 20px;
             border-radius: 30px;
+            cursor: pointer;
         }
     }
 }
 
 
 .section__article {
+    background-image: url('../assents/934051.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: grid;
     justify-content: center;
     text-align: center;
@@ -107,8 +115,11 @@
 
     h2 {
         font-size: 50px;
-        margin-top: 5%;
-        margin-bottom: 15%;
+        background-color: rgb(10, 10, 10, 0.8);
+        color: white;
+        border-radius: 5px;
+        margin-top: 10%;
+        margin-bottom: 10%;
     }
 
 
@@ -120,7 +131,7 @@
         width: 80vw;
         height: 100%;
         height: auto;
-        background-color: black;
+        background-color: rgb(10, 10, 10, 0.8);
         border-radius: 5px;
         display: grid;
         gap: 10px;
@@ -138,15 +149,25 @@
             .nombre {
                 font-size: 20px;
                 text-transform: uppercase;
+                background-color: black;
+                color: white;
+                letter-spacing: 3px;
+                border-radius: 3px;
+
             }
 
             .clase {
                 text-transform: uppercase;
             }
 
+            .precio {
+                background-color: white;
+                border-radius: 3px;
+            }
+
             .compra {
                 margin-top: 40%;
-                border-radius: 10px;
+                border-radius: 5px;
             }
         }
 
@@ -164,25 +185,30 @@
         .card-v {
             background-image: url("../assents/venusaur.jpg");
             background-size: cover;
+            background-position: right;
         }
         .card-c {
             background-image: url("../assents/charmander.jpg");
             background-size: cover;
+            background-position: center;
         }
 
         .card-ch {
             background-image: url("../assents/charmeleon.jpeg");
             background-size: cover;
+            background-position: center;
         }
 
         .card-cha {
             background-image: url("../assents/charizard.jpg");
             background-size: cover;
+            background-position: center;
         }
 
         .card-s {
             background-image: url("../assents/squirtle.png");
             background-size: cover;
+            background-position: center;
         }
 
         .card-w {
@@ -193,11 +219,13 @@
         .card-bl {
             background-image: url("../assents/blastoise.jpg");
             background-size: cover;
+            background-position: center;
         }
 
         .card-ca {
             background-image: url("../assents/caterpie.jpg");
             background-size: cover;
+            background-position: center;
         };
     };
 };

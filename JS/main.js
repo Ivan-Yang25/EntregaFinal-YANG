@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //Agregando contenido a la alerta
     alerta.innerHTML = `<p>
                             Complete los campos correspondientes
-                        </P>`
+                        </P>`;
 
 
     //Creancion de funcion para numero aleatorio para Token
@@ -68,24 +68,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } else {
 
+            //Corroborar que ya no exista un elemento "Token" para crear uno
             if (!lista.contains(Token)) {
 
                 Token.innerHTML = `<input type="text" id="token" />`
                 lista.insertBefore(Token, btn);
 
-                var AlertaToken = document.createElement('span');
+                let AlertaToken = document.createElement('span');
                 AlertaToken.textContent = `TUTOKENUSU${random}`;
 
                 content.insertBefore(AlertaToken, form);
 
                 let inp = document.getElementById('token');
 
+                //Validar si el token ingresado es igual al generado
                 inp.addEventListener('keydown', () => {
 
                     let valorToken = inp.value;
 
                     if(valorToken === AlertaToken.textContent) {
 
+                        //Iniciar sesion
                          window.location = 'tienda.html';
                     };
                 });
