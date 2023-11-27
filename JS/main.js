@@ -85,12 +85,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 inp.addEventListener('keydown', () => {
 
                     let valorToken = inp.value;
+                    let errorToken = document.createElement('li');
+                    errorToken.innerHTML = `<span>ERROR EN TOKEN</span>`; 
 
-                    if(valorToken === AlertaToken.textContent) {
+                    valorToken === AlertaToken.textContent ? 
+                    
+                    window.location = 'tienda.html' 
+                    
+                    : 
+                    
+                    (() => {
 
-                        //Iniciar sesion
-                         window.location = 'tienda.html';
-                    };
+                        if (form.contains(errorToken)) {
+
+                            errorToken.remove()
+                        
+                        } else {
+
+                            form.appendChild(errorToken);
+
+                            setTimeout(() => {
+                                errorToken.remove();
+                            }, 2000);
+                        }
+                    }) (); 
                 });
             };
         };

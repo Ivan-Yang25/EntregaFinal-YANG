@@ -76,9 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
             
             //Asignar valores a elementos específicos dentro de las colecciones
             NombrePok[x].textContent = carroPokemon[x].nombre;
-            TipoPok[x].textContent = `Tipo: ${carroPokemon[x].clase}`;
-            PrecioPok[x].textContent = `Precio: ${carroPokemon[x].precio}`;
-        }
+            TipoPok[x].textContent = carroPokemon[x].clase;
+            PrecioPok[x].textContent = `$${carroPokemon[x].precio}`;
+        };
         
 
         //for para recorrer la lista compra
@@ -112,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <td>${item.clase}</td>
                         <td>$${item.precio}</td>   
                     </tr>
+                    <button class="borrar">X</button>
                     `
                 });
 
