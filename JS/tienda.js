@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 //Alerta consultado si deseas comprar
                 Swal.fire({
                     title: `¿Estas seguro de comprar a ${nombre}?`,
-                    icon: "warning",
+                    icon: "question",
                     showCancelButton: true,
                     confirmButtonColor: "#3085d6",
                     cancelButtonColor: "#d33",
