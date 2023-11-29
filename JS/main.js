@@ -82,33 +82,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 let inp = document.getElementById('token');
 
                 //Validar si el token ingresado es igual al generado
-                inp.addEventListener('keydown', () => {
+                form.addEventListener('submit', () => {
 
                     let valorToken = inp.value;
                     let errorToken = document.createElement('li');
                     errorToken.innerHTML = `<span>ERROR EN TOKEN</span>`; 
 
+                    //Valido a través de un operador ternario
                     valorToken === AlertaToken.textContent ? 
                     
                     window.location = 'tienda.html' 
                     
                     : 
+                    //Alerta de libreria en caso de error en Token.
                     
-                    (() => {
-
-                        if (form.contains(errorToken)) {
-
-                            errorToken.remove()
-                        
-                        } else {
-
-                            form.appendChild(errorToken);
-
-                            setTimeout(() => {
-                                errorToken.remove();
-                            }, 2000);
-                        }
-                    }) (); 
+                    Swal.fire({
+                        icon: "error",
+                        title: "Error en Token ingresado",
+                    });   
                 });
             };
         };

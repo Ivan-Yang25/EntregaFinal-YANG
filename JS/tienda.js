@@ -73,13 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             //Obtener el índice actual
             const x = Array.from(card).indexOf(cardElement);
-            
+
             //Asignar valores a elementos específicos dentro de las colecciones
             NombrePok[x].textContent = carroPokemon[x].nombre;
             TipoPok[x].textContent = carroPokemon[x].clase;
             PrecioPok[x].textContent = `$${carroPokemon[x].precio}`;
         };
-        
+
 
         //for para recorrer la lista compra
         for (let u = 0; u < compra.length; u++) {
@@ -100,29 +100,53 @@ document.addEventListener('DOMContentLoaded', () => {
                 //Instanciar OBJ
 
                 const itemCarrito = new PokemonObj(nombre, clase, precio);
-                carrito.push(itemCarrito);
 
-                //Recorriendo los items del carrito
-                carrito.forEach(item => {
+                //Alerta consultado si deseas comprar
+                Swal.fire({
+                    title: `¿Estas seguro de comprar a ${nombre}?`,
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Si! Lo quiero!"
+                }).then((result) => {
 
-                    //Agregando contenido a la variable
-                    contenidoCarrito += `
-                    <tr class="elemento">
-                        <td>${item.nombre}</td>
-                        <td>${item.clase}</td>
-                        <td>$${item.precio}</td>   
-                    </tr>
-                    <button class="borrar">X</button>
-                    `
-                });
+                    //Condicional que dependiendo de lo que aceptes realiza la compra o no 
+                    if (result.isConfirmed) {
+                        Swal.fire({
+                            title: "¡Guardado!",
+                            text: "Tu pokemón fue guardado en el carrito",
+                            icon: "success"
+                        });
 
-                //Agregando el contenido al elemento del DOM
-                content.innerHTML = contenidoCarrito;
+                        carrito.push(itemCarrito);
 
-                //Vaciar carrito 
-                clear.addEventListener('click', () => {
-                    carrito = [];
-                    content.innerHTML = ``;
+                        //Recorriendo los items del carrito
+                        carrito.forEach(item => {
+
+                            //Agregando contenido a la variable
+                            contenidoCarrito += `
+                                <tr class="elemento">
+                                    <td>${item.nombre}</td>
+                                    <td>${item.clase}</td>
+                                    <td>$${item.precio}</td>   
+                                </tr>
+                                <button class="borrar">X</button>                                `
+                        });
+
+                        //Agregando el contenido al elemento del DOM
+                        content.innerHTML = contenidoCarrito;
+
+                        //Vaciar carrito 
+                        clear.addEventListener('click', () => {
+                            carrito = [];
+                            content.innerHTML = ``;
+                        });
+
+                    } else {
+                        itemCarrito = '';
+                        carrito.push(itemCarrito);
+                    };
                 });
             });
         };
