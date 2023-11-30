@@ -84,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
         //for para recorrer la lista compra
         for (let u = 0; u < compra.length; u++) {
 
-
             //Evento para la lista compra
             compra[u].addEventListener('click', () => {
 
@@ -131,7 +130,9 @@ document.addEventListener('DOMContentLoaded', () => {
                                     <td>${item.clase}</td>
                                     <td>$${item.precio}</td>   
                                 </tr>
-                                <button class="borrar">X</button>                                `
+                                <span class="idItem"></span>
+                                <button class="borrar">X</button>
+                            `
                         });
 
                         //Agregando el contenido al elemento del DOM
