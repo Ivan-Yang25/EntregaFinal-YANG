@@ -33,11 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     //Funcion para crear objetos
-    let PokemonObj = function (nombre, clase, precio) {
+    let PokemonObj = function (nombre, clase, precio, id) {
 
         this.nombre = nombre;
         this.clase = clase;
         this.precio = precio;
+        this.id = id;
 
     };
 
@@ -98,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 //Instanciar OBJ
 
-                const itemCarrito = new PokemonObj(nombre, clase, precio);
+                const itemCarrito = new PokemonObj(nombre, clase, precio, u);
 
                 //Alerta consultado si deseas comprar
                 Swal.fire({
@@ -119,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         });
 
                         carrito.push(itemCarrito);
+                        console.log(itemCarrito.id);
 
                         //Recorriendo los items del carrito
                         carrito.forEach(item => {
