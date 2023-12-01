@@ -132,7 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
                                     <td>${item.clase}</td>
                                     <td>$${item.precio}</td>   
                                 </tr>
-                                <span class="idItem"></span>
                                 <button class="borrar">X</button>
                             `
                         });

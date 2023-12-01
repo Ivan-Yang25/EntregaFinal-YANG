@@ -46,21 +46,30 @@
                     .elemento {
                         font-size: 15px;
                         border: 1px solid white;
-                        display: flex;
-                        justify-content: space-between;
+                        display: grid;
+                        height: 50px;
+                        grid-template-columns: repeat(3, 1fr);
+                        align-items: center;
                         text-align: center;
                         margin-bottom: 10px;
+
+                        td {
+                            margin: 0 10px 0 10px;
+                        }
                     }
                 }
             }
 
             &:hover .buy-card {
-                display: block;
+                display: grid;
+                justify-content: center;
                 overflow: hidden;
                 overflow-y: scroll;
                 width: 400px;
                 height: 400px;
                 position: absolute;
+                border: 2px solid white;
+                border-radius: 4px;
                 right: 0;
                 background-color: black;
 
@@ -69,15 +78,15 @@
                     font-size: 1rem;
                     display: flex;
                     justify-content: space-between;
-                    margin: 0 10px 0 10px;
+                    margin: 10px 10px 20px 10px;
                 }
             }
 
             &:hover {
 
-                button {
+                .close-carrito {
                     display: block;
-                    width: 90%;
+                    width: 60%;
                     padding: 1rem;
                     margin: 10px auto;
                     background-color: transparent;
@@ -93,8 +102,8 @@
         }
 
         .close {
-            width: 50px;
-            height: 50px;
+            width: 30px;
+            height: 30px;
             margin-right: 20px;
             border-radius: 30px;
             cursor: pointer;
