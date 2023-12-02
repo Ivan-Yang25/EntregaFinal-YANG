@@ -120,7 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         });
 
                         carrito.push(itemCarrito);
-                        console.log(itemCarrito.id);
 
                         //Recorriendo los items del carrito
                         carrito.forEach(item => {
@@ -136,8 +135,32 @@ document.addEventListener('DOMContentLoaded', () => {
                             `
                         });
 
+                        const Encontrarid = (id) => {
+                        
+                            const idElemento = carrito.find((pokemon) => pokemon.id === id);
+                            
+                            console.log(idElemento);
+
+                            carrito = carrito.filter(CarritoId => {
+
+                                return CarritoId != idElemento;
+                            });
+                        }; 
+                        
+
                         //Agregando el contenido al elemento del DOM
                         content.innerHTML = contenidoCarrito;
+
+                        let borrar = content.getElementsByClassName('borrar');
+
+                        for (let i = 0; i < borrar.length; i++) {
+
+                            borrar[i].addEventListener('click', () => {
+
+                                Encontrarid(content.id);
+                            });
+                        };
+                       
 
                         //Vaciar carrito 
                         clear.addEventListener('click', () => {
