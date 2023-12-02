@@ -81,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
             PrecioPok[x].textContent = `$${carroPokemon[x].precio}`;
         };
 
-
         //for para recorrer la lista compra
         for (let u = 0; u < compra.length; u++) {
 
@@ -92,13 +91,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 let contenidoCarrito = '';
 
                 //Extraer informacion del HTML
-
                 let nombre = card[u].getElementsByClassName('nombre')[0].textContent;
                 let clase = card[u].getElementsByClassName('clase')[0].textContent;
                 let precio = card[u].getElementsByClassName('precio')[0].textContent;
 
                 //Instanciar OBJ
-
                 const itemCarrito = new PokemonObj(nombre, clase, precio, u);
 
                 //Alerta consultado si deseas comprar
@@ -124,44 +121,19 @@ document.addEventListener('DOMContentLoaded', () => {
                         //Recorriendo los items del carrito
                         carrito.forEach(item => {
 
-                            //Agregando contenido a la variable
-                            contenidoCarrito += `
-                                <tr class="elemento">
-                                    <td>${item.nombre}</td>
-                                    <td>${item.clase}</td>
-                                    <td>$${item.precio}</td>   
-                                </tr>
-                                <button class="borrar">X</button>
-                            `
+                        //Agregando contenido a la variable
+                        contenidoCarrito += `
+                            <tr class="elemento">
+                                <td>${item.nombre}</td>
+                                <td>${item.clase}</td>
+                                <td>$${item.precio}</td>   
+                            </tr>
+                        `
                         });
-
-                        const Encontrarid = (id) => {
-                        
-                            const idElemento = carrito.find((pokemon) => pokemon.id === id);
-                            
-                            console.log(idElemento);
-
-                            carrito = carrito.filter(CarritoId => {
-
-                                return CarritoId != idElemento;
-                            });
-                        }; 
-                        
 
                         //Agregando el contenido al elemento del DOM
                         content.innerHTML = contenidoCarrito;
-
-                        let borrar = content.getElementsByClassName('borrar');
-
-                        for (let i = 0; i < borrar.length; i++) {
-
-                            borrar[i].addEventListener('click', () => {
-
-                                Encontrarid(content.id);
-                            });
-                        };
                        
-
                         //Vaciar carrito 
                         clear.addEventListener('click', () => {
                             carrito = [];
